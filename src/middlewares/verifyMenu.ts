@@ -7,8 +7,7 @@ const addDataSchema = Joi.object({
     price: Joi.number().min(0).required(),
     category: Joi.string().valid('DRINK', 'FOOD', 'SNACK').required(),
     description: Joi.string().required(),
-    picture: Joi.allow().optional(),
-    user: Joi.required()
+    picture: Joi.allow().optional()
 })
 
 export const verifyAddMenu = (request: Request, response: Response, next: NextFunction) => {
